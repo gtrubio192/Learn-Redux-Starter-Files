@@ -5,20 +5,23 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 import css from './styles/style.styl';
-import Main from './components/Main';
+import App from './components/App';
 import Single from './components/Single';
 import PhotoGrid from './components/Photogrid';
 
-// Provider is the binding between redux and react
+// Provider is the binding between redux store and react app
 
 
 const router = (
-  <Router history={browserHistory}>
-    <Route path="/" component={Main}>
-      <IndexRoute component={PhotoGrid}></IndexRoute>
-      <Route path="/view/:postId" component={Single}></Route>
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <Router history={history}>
+      <Route path="/" component={App}>
+        <IndexRoute component={PhotoGrid}></IndexRoute>
+        <Route path="/view/:postId" component={Single}></Route>
+      </Route>
+    </Router>
+  </Provider>
+
 );
 
 render(router, document.getElementById('root'));

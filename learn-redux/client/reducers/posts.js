@@ -11,8 +11,14 @@
 // edits it with the action, and return an updated store
 // then react will take over and update DOM
 
+// ** Every reducer runs anytime an action is dispatched.
+// up to logic inside of a reducer to do anything with the dispatch
+
+
 function posts(state = [], action) {
   console.log(state, action);
+
+  
   return state;
 }
 

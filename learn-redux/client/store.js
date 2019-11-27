@@ -1,5 +1,5 @@
 import { createStore, compose } from 'redux';
-import { synchHistoryWithStore } from 'react-router-redux';
+import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 
 import rootReducer from './reducers/index';
@@ -19,6 +19,6 @@ const store = createStore(rootReducer, defaultState);
 
 // weave in redux store into router history
 // every route will have access to both its history, and store
-export const history = synchHistoryWithStore(browserHistory, store);
+export const history = syncHistoryWithStore(browserHistory, store);
 
 export default store;
