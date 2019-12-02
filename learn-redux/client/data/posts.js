@@ -2,14 +2,14 @@ const posts = [
   {
     "code": "BAcyDyQwcXX",
     "caption": "Lunch #hamont",
-    "likes": 56,
+    "likes": 66,
     "id": "1161022966406956503",
     "display_src": `https://picsum.photos/400/400/?image=${Math.floor((Math.random() * 85))}`,
   },
   {
     "code": "BAcJeJrQca9",
     "caption": "Snow! ⛄️🌨❄️ #lifewithsnickers",
-    "likes": 59,
+    "likes": 665,
     "id": "1160844458347054781",
     "display_src": `https://picsum.photos/400/400/?image=${Math.floor((Math.random() * 85))}`,
   },

@@ -10,7 +10,7 @@ import Single from './components/Single';
 import PhotoGrid from './components/Photogrid';
 
 // Provider is the binding between redux store and react app
-
+// also, exposes our store to the router
 
 const router = (
   <Provider store={store}>
