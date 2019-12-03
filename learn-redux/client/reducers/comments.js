@@ -16,7 +16,7 @@
 
 function comments(state = [], action) {
   console.log(state, action);
-    if(typeof action.postId !=='undefined') {
+  if(typeof action.postId !=='undefined') {
     return {
       // take current state
       ...state,
@@ -37,7 +37,13 @@ function postComments(state = [], action) {
         text: action.comment
       }];
     case 'REMOVE_COMMENT':
-      return state;
+      console.log('removing comment', action)
+      return [
+        // from the start to the one we want to delete
+        ...state.slice(0,action.index),
+        // after the deleted one, to the end
+        ...state.slice(action.index + 1)
+      ];
     default:
       return state;
   }
